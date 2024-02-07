@@ -6,6 +6,7 @@ import './styles.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
+  console.log('todos:', todos); 
   const [task, setTask] = useState('');
   const [session , setSession] = useState('Add')
   const [selectedTodo,setSelectedTodo]=useState(null);
@@ -18,11 +19,25 @@ function App() {
 
   }
 
-  const addTodo = (task) => {
-    setTodos([...todos, { id: Date.now(), ...task }]);
-    console.log(todos);
-  };
+  // const addTodo = (task) => {
+  //   setTodos([...todos, { id: Date.now(), ...task }]);
+  //   console.log(todos);
+  // };
 
+  const addTodo = (task) => {
+    if (session === 'Add') {
+      setTodos([...todos, { id: Date.now(), ...task }]);
+    } else if (session === 'Edit' && selectedTodo) {
+      const updatedTodos = todos.map(todo => {
+        if (todo.id === selectedTodo.id) {
+          return { ...todo, ...task };
+        }
+        return todo;
+      });
+      setTodos(updatedTodos);
+      setSession('Add'); // Reset session after saving edits
+    }
+  };
   const taskinput = (ele) =>{
     setTask(ele);
     console.log(task);
