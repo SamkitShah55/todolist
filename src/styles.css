@@ -1,0 +1,153 @@
+/* src/styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #DDD0C8; */
+    background-color: black;
+    color: #2272FF;
+    margin: 0;
+    padding: 0;
+    /* height: 500px;
+    width: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    display: flex;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 10px;
+    background-color: lightgoldenrodyellow;
+    border: 2px solid #ccc; 
+    transition: border-color 0.3s ease-in-out;
+}
+input:hover {
+    border-color: #0074cc; /* Dark blue border color on hover */
+  }
+
+  input:hover,
+input:focus {
+  border-color: #0074cc; /* Dark blue border color on hover and focus */
+}
+
+input::placeholder {
+  color: #ccc; /* Placeholder text color */
+}
+button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+  /* display:block;
+  align-items:center; */
+    color: whitesmoke;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+    margin-left: -10rem;
+    padding: 10px;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+
+    /* background-color: #323232; */
+    background-color: #2272FF;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+   justify-content: space-between;
+   margin-left: -4rem;
+}
+
+button {
+    background-color: #ff4136;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.addbtn {
+    color: white;
+    background-color: green;
+
+}
+/* src/styles.css */
+
+h1 {
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.heading{
+    color:white ;
+}
+/* src/styles.css */
+
+.hover-border {
+    transition: border 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  .hover-border:hover {
+    border: 2px solid #0074cc; /* Border style on hover */
+  }
+  
+  /* src/styles.css */
+
+/* Additional styles for the select dropdown */
+.priority-dropdown {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.listelement{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-text{
+  width:"40%";
+  overflow-y: "scroll"
+}
+
+.side-btn button{
+  margin:10px;
+}
+/* Add any other styles as needed */
+/* src/styles.css */
+
+/* Additional styles for the priority labels and delete buttons */
